@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const createClassForm = document.getElementById('createClassForm');
     const classNameInput = document.getElementById('className');
     const classCodeInput = document.getElementById('classCode');
-    const API_BASE_URL = 'http://localhost:5000';
+    const API_BASE_URL = 'https://attendance-system-tlj2.onrender.com';
     
     // State variables
     let codeGenerationInterval;
