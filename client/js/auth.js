@@ -23,7 +23,7 @@ if (loginForm) {
         const role = document.querySelector('.role-btn.active').dataset.role;
         
         try {
-            const response = await fetch('http://localhost:5000/api/auth/login', {
+            const response = await fetch('https://attendance-system-tlj2.onrender.com/api/auth/login', {
                 method: 'POST',
                 mode: 'cors', // Explicitly set CORS mode
                 headers: {
