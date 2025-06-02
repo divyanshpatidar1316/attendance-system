@@ -1,3 +1,4 @@
+
 const express = require('express');
 const auth = require('../middleware/auth');
 const Class = require('../models/Class');
