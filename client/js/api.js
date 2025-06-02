@@ -1,5 +1,5 @@
 
-const API_BASE_URL = 'https://attendance-system-backend.onrender.com/api';
+const API_BASE_URL = 'https://attendance-system-tlj2.onrender.com';
 
 export const authService = {
     async register(userData) {
