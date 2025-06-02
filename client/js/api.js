@@ -1,4 +1,5 @@
-const API_BASE_URL = 'http://localhost:5000/api';
+// In attendance-system/client/js/api.js
+const API_BASE_URL = 'https://attendance-system-backend.onrender.com/api'; // REPLACE with your actual backend URL from Render
 
 export const authService = {
     async register(userData) {
