@@ -10,7 +10,7 @@ const attendanceRoutes = require('./routes/attendance');
 const app = express();
 // Middleware
 app.use(cors({
-    origin: ['http://localhost:5500','http://127.0.0.1:5500'], // Your frontend origin
+    origin: ['http://localhost:5500','http://127.0.0.1:5500','https://attendance-system-flax-alpha.vercel.app'], // Your frontend origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
