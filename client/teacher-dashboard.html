@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Teacher Dashboard</h1>
+            <button id="logoutBtn" class="btn-logout">Logout</button>
+        </header>
+        
+        <div class="dashboard-content">
+            <div class="card">
+                <h2>Create New Class</h2>
+                <form id="createClassForm">
+                    <input type="text" id="className" placeholder="Class Name (e.g., Data Mining and Warehousing)" required>
+                    <input type="text" id="classCode" placeholder="Class Code (e.g., DMW401)" required>
+                    <button type="submit" class="btn-primary">Add Class</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>Generate Attendance Code</h2>
+                <div class="class-selection">
+                    <h3>Select Class</h3>
+                    <select id="teacherClassSelector" class="form-control">
+                        <option value="">Loading classes...</option>
+                    </select>
+                </div>
+                <button id="generateCodeBtn" class="btn-primary" disabled>Generate Code</button>
+                <div id="attendanceCodeDisplay" class="code-display">No active code</div>
+                <div id="codeExpiryDisplay" class="code-expiry"></div>
+                <p class="info">Share this code with students to mark attendance</p>
+            </div>
+            
+            <div class="card">
+                <h2>Today's Attendance</h2>
+                <div class="attendance-stats">
+                    <div class="stat-box present">
+                        <h3>Present</h3>
+                        <p id="presentCount">0</p>
+                    </div>
+                    <div class="stat-box absent">
+                        <h3>Absent</h3>
+                        <p id="absentCount">0</p>
+                    </div>
+                </div>
+                
+                <div class="student-lists">
+                    <div class="student-list">
+                        <h3>Present Students</h3>
+                        <ul id="presentStudentsList">
+                            <li class="empty-message">No students present yet</li>
+                        </ul>
+                    </div>
+                    <div class="student-list">
+                        <h3>Absent Students</h3>
+                        <ul id="absentStudentsList">
+                            <li class="empty-message">No absent students</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/teacher.js"></script>
+</body>
+</html>
