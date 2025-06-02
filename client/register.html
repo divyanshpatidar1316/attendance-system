@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Attendance System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <h1>Create Account</h1>
+            <div class="role-selector">
+                <button class="role-btn active" data-role="student">Student</button>
+                <button class="role-btn" data-role="teacher">Teacher</button>
+            </div>
+            <form id="registerForm">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <button type="submit" class="login-btn">Register</button>
+            </form>
+            <p class="form-footer">Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

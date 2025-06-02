@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Welcome, <span id="studentName"></span></h1>
+            <button id="logoutBtn">Logout</button>
+        </header>
+        
+        <div class="dashboard-content">
+            <div class="card">
+                <h2>Mark Attendance</h2>
+                <div class="attendance-form">
+                    <input type="text" id="attendanceCode" placeholder="Enter attendance code">
+                    <button id="markAttendanceBtn">Mark Attendance</button>
+                    <button id="getLocationBtn">Verify Location</button>
+                    <p id="locationStatus"></p>
+                </div>
+                <div id="attendanceStatus" class="status-message"></div>
+            </div>
+            
+            <div class="card">
+                <h2>Your Attendance Stats</h2>
+                <div class="attendance-progress">
+                    <div class="progress-circle">
+                        <svg width="120" height="120" viewBox="0 0 120 120">
+                            <circle class="progress-bg" cx="60" cy="60" r="54" stroke-width="8"></circle>
+                            <circle class="progress-bar" cx="60" cy="60" r="54" stroke-width="8"></circle>
+                        </svg>
+                        <div class="progress-text">
+                            <span id="attendancePercent">0</span>%
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="class-selection">
+                    <h3>Your Classes</h3>
+                    <select id="classSelector" class="form-control">
+                        <option value="">Select a class</option>
+                    </select>
+                </div>
+  
+                <div class="class-attendance-details">
+                    <h3 id="classTitle">Class Attendance</h3>
+                    <div class="stats-container">
+                        <div>Total Sessions: <span id="classTotal">0</span></div>
+                        <div>Present: <span id="classPresent">0</span></div>
+                        <div>Absent: <span id="classAbsent">0</span></div>
+                        <div>Percentage: <span id="classPercentage">0</span>%</div>
+                    </div>
+    
+                    <div class="attendance-history">
+                        <h4>Recent Attendance</h4>
+                        <table id="attendanceTable">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Code</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/student.js"></script>
+</body>
+</html>
