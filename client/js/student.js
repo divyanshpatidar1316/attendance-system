@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const attendancePercentCircle = document.getElementById('attendancePercent');
 
     let userLocation = null;
-    const API_BASE_URL = 'http://localhost:5000';
+    const API_BASE_URL = 'https://attendance-system-tlj2.onrender.com';
 
     // Initial setup
     checkAuth();
